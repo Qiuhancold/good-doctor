@@ -2,7 +2,7 @@
  * @Author: qh
  * @Date: 2023-03-31 11:28:06
  * @LastEditors: qh
- * @LastEditTime: 2023-04-07 17:22:44
+ * @LastEditTime: 2023-04-08 16:29:45
  * @Description: 根组件
 -->
 <script setup lang="ts">
@@ -33,4 +33,8 @@
   <router-view></router-view>
 </template>
 
-<style></style>
+<style>
+  #app {
+    width: 375px;
+  }
+</style>
