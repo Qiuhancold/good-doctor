@@ -1,0 +1,36 @@
+{
+  "compilerOptions": {
+    //几个常用配置
+    "target": "ESNext", // 目标语言的版本
+    "useDefineForClassFields": true, // 是否校验TypeScript数据类型
+    "module": "ESNext", // 生成代码的模板标准
+    "moduleResolution": "Node",
+    "removeComments": true, // 是否删除注释
+    "outDir": "./dist", // 指定输出目录
+    "alwaysStrict": true, // 在代码中注入'use strict'
+    // 严格的类型检查选项
+    // "strict": true, // 启用所有严格类型检查选项
+    "noImplicitAny": true, // 在表达式和声明上有隐含的any类型时报错
+    "jsx": "preserve", // 有jsx语法需要支持的项目，可以设置值preserve、react等
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "lib": ["ESNext", "DOM"], // 用于为了在我们的代码中显示的指明需要支持的ECMAScript语法或环境对应的类型声明文件，例如我们的代码会使用到浏览器中的一些对象window、document这些全局对象api对于TypeScript Complier来说是不能识别的
+    "skipLibCheck": true,
+    "noEmit": true,
+    "baseUrl": "./", // 解析非相对模块的基地址，默认是当前目录
+    "stripInternal": true,
+    "paths": {
+      "@/*": ["src/*"] // 路径映射，相对于baseUrl
+      // "@build/*": ["./build/*"],
+      // "#/*": ["./types/*"],
+      // "_pinia/*": ["./src/pinia/*"]
+    }
+  },
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
+  "references": [
+    {
+      "path": "./tsconfig.node.json"
+    }
+  ]
+}
